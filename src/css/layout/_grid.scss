@@ -11,7 +11,9 @@
   @include outer-container;
 }
 
-.row { @include row(); }
+.row { @include row();
+margin-bottom: 20px;
+}
 
 // Susy grid
 // See _variables.scss for grid settings
