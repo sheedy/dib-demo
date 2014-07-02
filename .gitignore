@@ -43,5 +43,6 @@ Thumbs.db
 /node_modules/
 /build
 /vendor
+/lib/*.JPG
 .bundle
 .svg-build
