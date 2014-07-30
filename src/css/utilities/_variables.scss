@@ -10,11 +10,11 @@
 //           Typography
 // ==================================
 
-$font-base-size-unitless:                               16; // the font size in pixels (no units specified)
-$font-base-size-percentage-unitless:                    $font-base-size-unitless/16 * 100; // percentage value (16 * 112.5% = 18px) - scale origin
+$font-base-size-unitless:                               16;                                       // the font size in pixels (no units specified)
+$font-base-size-percentage-unitless:                    $font-base-size-unitless/16 * 100;        // percentage value (16 * 112.5% = 18px) - scale origin
 $font-base-size-percentage:                             $font-base-size-percentage-unitless * 1%;
 
-$base-line-height:                                      1.5; // 16px * 1.5 = 24px
+$base-line-height:                                      1.5;                                      // 16px * 1.5 = 24px
 
 $font-family:                                           "HelveticaNeue", Helvetica, Arial, Verdana, sans-serif;
 $font-family-thin:                                      "HelveticaNeue", Helvetica, Arial, Verdana, sans-serif;
@@ -44,6 +44,7 @@ $column-width:            $body-width / $columns - $gutter-width;
 $grid-padding:            20px;
 $show-grid-backgrounds:   false;
 
+
 // Bourbon Neat grid settings
 $column:                  $column-width;
 $gutter:                  $gutter-width;
@@ -70,7 +71,6 @@ $light-grey:              #e9e9e9;
 $grey:                    #333333;
 $mid-grey:                #2c2c2c;
 $dark-grey:               #1c1c1c;
-$red:                      red;
 $pale-yellow:             #fff8bb;
 
 // ========== Colours with context  ==========
@@ -89,8 +89,8 @@ $border-color-light:      $light-grey;
 $link-color:              $black;
 $link-color-light:        $grey;
 $focus-color:             $black;
-$required-color:          $red;
-$error-color:             $red;
+// $required-color:          $red;
+// $error-color:             $red;
 $alert-color:             $pale-yellow;
 
 // -----  End of Colours  ------
@@ -125,3 +125,10 @@ $border-radius-default:      4px;
 $spacing-val-default:        15px;
 
 // -----  End of Layout  ------
+
+$wireframe:                  true;
+$wf-mode:                    sketched; // sketch | outline | filled | filled-outline
+
+@if($wireframe) {
+  $font-family:              "Comic Sans MS";
+}

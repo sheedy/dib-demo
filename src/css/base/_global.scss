@@ -25,14 +25,13 @@ html {
   text-rendering:           optimizeLegibility; // voodoo to enable ligatures and kerning
   // Kerning for OTF http://blog.typekit.com/2014/02/05/kerning-on-the-web/
   font-kerning:             normal;
+
   @include font-feature-settings(kern);
   @include font-smooth(antialiased);
 }
 
-// Box sizing handled by neat
-// * {
-//   @include box-sizing(border-box);
-// }
+
+* { @include box-sizing(border-box); }
 
 body {
   background-color: $bg-color;
@@ -55,7 +54,8 @@ hr {
 h1, h2, h3, h4, h5, h6, hgroup,
 ul, ol, dd,
 p, figure,
-pre, table, fieldset, hr {
+pre, table, fieldset, hr,
+section {
   // Single-direction margin declarations
   // http://csswizardry.com/2012/06/single-direction-margin-declarations/
   margin-bottom: #{$base-line-height}rem;
