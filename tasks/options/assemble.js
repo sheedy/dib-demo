@@ -10,10 +10,9 @@ module.exports = {
 			'<%= src %>/data/*.json'
 		],
 		partials: [
-			'<%= src %>/content/partials/**/*.hbs',
-			'<%= src %>/content/layouts/*.hbs'
+			'<%= src %>/content/partials/**/*.hbs'
 		],
-		layoutdir: 'src/content/templates',
+		layoutdir: 'src/templates',
 		layout: "default.hbs",
 	},
 
@@ -25,7 +24,10 @@ module.exports = {
 	// All pages
 	server: {
 		files: {
-			'<%= temp %>/': '<%= src %>/content/pages/*.hbs'
+			'<%= temp %>/': [
+        '<%= src %>/content/pages/*.hbs',
+        '<%= src %>/_project/pages/*.hbs',
+      ]
 		}
 	}
 

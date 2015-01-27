@@ -1,7 +1,20 @@
-.block {
-  @extend %base-wf-style;
+@if($wireframe) {
 
-  &--med {
-    min-height: 200px;
+  .block {
+    @extend %base-wf-style !optional;
+
+    background-image: url(../images/img.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+
+
+    &--tiny { min-height: 500px; }
+    &--sml { min-height: 100px; }
+    &--med { min-height: 200px; }
+    &--lge { min-height: 400px; }
+    &--huge { min-height: 800px; }
+
   }
+
 }
